@@ -164,3 +164,8 @@ module.exports.logout = (req, res) => {
     res.status(200).json({ message: "Unable to send cookie" });
   }
 };
+
+//health check
+module.exports.Welcome = (req, res) => {
+  res.status(200).json("OK");
+};
