@@ -11,9 +11,7 @@ const db_URI = process.env.DB_URI;
 const start = async () => {
   try {
     await mongoose.connect(db_URI).then((result) => {
-      app.listen(3000, () => {
-        console.log("Listening to port 3000");
-      });
+      app.listen(4000, "0.0.0.0");
       app.use(
         cors({
           origin: process.env.ORIGIN,
